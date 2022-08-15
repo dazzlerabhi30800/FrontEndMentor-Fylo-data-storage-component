@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+:root {
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+    /* ### Neutral */
+
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+
+    --font-Raleway: 'Raleway', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-Raleway);
+}
+
+body {
+    min-height: 100vh;
+    color: var(--Pale-Blue)
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: url('./images/bg-mobile.png') no-repeat;
+    background-size: cover;
+    background-color: var(--Very-Dark-Blue);
+    background-position: center;
+    padding: 2rem;
+}
+
+.description--wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--Dark-Blue);
+    padding: 2rem;
+    border-radius: 0px 100px 0px 0px;
+    width: 80%;
+}
+
+.description--wrapper>img {
+    width: 140px;
+    height: 45px;
+}
+
+.icon--wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon--wrapper div {
+    background: var(--Very-Dark-Blue);
+    padding: .8rem 1rem;
+    border-radius: 10px;
+}
+
+.storage--container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--Dark-Blue);
+    width: 80%;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.heading {
+    font-size: .9rem;
+    font-weight: 400;
+    width: 100%;
+}
+
+.heading span {
+    font-weight: 700;
+}
+
+.storage--indicator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.storage--bar {
+    background: var(--Very-Dark-Blue);
+    width: 100%;
+    border-radius: 30px;
+    height: 25px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.progress--bar {
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    width: 80%;
+    height: 100%;
+    border-radius: 30px;
+    position: relative;
+}
+
+.progress--bar::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: 1px;
+    bottom: 0;
+    height: 90%;
+    width: 17px;
+    background: var(--Pale-Blue);
+    border-radius: 50%;
+}
+
+.storage--info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.storage--left--container {
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 10px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.storage--left--container p {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    color: var(--Grayish-Blue);
+}
+
+.storage--left--container .left {
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--Very-Dark-Blue);
+}
+
+@media (hover: hover) {
+    .icon--wrapper div {
+        cursor: pointer;
+    }
+}
+
+@media Screen and (min-width: 800px) {
+    main {
+        flex-direction: row;
+        padding: 2rem;
+    }
+
+    .description--wrapper {
+        width: clamp(320px, 30vw, 600px);
+    }
+
+    .storage--container {
+        /* width: 40%; */
+        width: clamp(320px, 30vw, 600px);
+    }
+
+    .storage--left--container {
+        position: absolute;
+        background: white;
+        color: black;
+        padding: 1rem;
+        border-radius: 10px 10px 0px 10px;
+        bottom: 150px;
+        left: 70%;
+        transform: translateX(-50%);
+    }
+
+    .storage--left--container::after {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        bottom: -20px;
+        right: 0;
+        border-bottom: 25px solid transparent;
+        border-right: 30px solid white;
+    }
+
+    .storage--left--container p {
+        white-space: nowrap;
+    }
+}
