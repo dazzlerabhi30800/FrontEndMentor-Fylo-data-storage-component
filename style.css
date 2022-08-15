@@ -48,7 +48,7 @@ main {
     background: var(--Dark-Blue);
     padding: 2rem;
     border-radius: 0px 100px 0px 0px;
-    width: 80%;
+    width: 90%;
 }
 
 .description--wrapper>img {
@@ -73,7 +73,7 @@ main {
     flex-direction: column;
     gap: 1.5rem;
     background: var(--Dark-Blue);
-    width: 80%;
+    width: 90%;
     padding: 2.5rem 2rem;
     border-radius: 10px;
     position: relative;
