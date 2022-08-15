@@ -171,6 +171,10 @@ main {
     main {
         flex-direction: row;
         padding: 2rem;
+        background: url('./images/bg-desktop.png') no-repeat;
+        background-position: center 100%;
+        background-color: var(--Very-Dark-Blue);
+        background-size: 100% 45%;
     }
 
     .description--wrapper {
